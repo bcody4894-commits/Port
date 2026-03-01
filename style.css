@@ -16,13 +16,11 @@ a, a:visited {
     text-decoration: none;
 }
 
-/* HERO BACKGROUND (CROPPED + PARALLAX) */
+/* HERO / BACKGROUND */
 .hero-bg-wrapper {
-    perspective: 1px;
-    height: 70vh;
-    overflow-x: hidden;
-    overflow-y: auto;
     position: relative;
+    height: 70vh;
+    overflow: hidden;
 }
 
 .hero-bg {
@@ -34,7 +32,7 @@ a, a:visited {
     background-image: url('images/IMG_2672.jpeg');
     background-size: cover;
     background-position: center;
-    transform: translateZ(-1px) scale(2);
+    transform: translateZ(-1px) scale(2); /* keep original parallax */
     z-index: 1;
     filter: brightness(0.6) saturate(1.2);
 }
@@ -107,12 +105,11 @@ a, a:visited {
     text-decoration: none;
 }
 
-/* LABEL INSIDE BUTTON */
 .button-label {
-    color: #fff;          /* white text */
+    color: #fff; /* white text */
     font-size: 1.3rem;
     font-weight: bold;
-    z-index: 10;           /* ensures label sits above background */
+    z-index: 10;
     pointer-events: none;
 }
 
@@ -124,8 +121,7 @@ a, a:visited {
 
 /* MOBILE FIX */
 @media (max-width: 768px) {
-    .hero-bg-wrapper,
-    .hero-section {
+    .hero-bg-wrapper, .hero-section {
         height: 45vh;
     }
 
